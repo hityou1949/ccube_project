@@ -1,0 +1,125 @@
+/* 기본 설정 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f5f7fa;
+}
+
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* 헤더 */
+.header {
+  background: linear-gradient(135deg, #4a90d9, #6c5ce7);
+  color: #fff;
+  padding: 48px 0;
+  text-align: center;
+}
+
+.header__title {
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+.header__subtitle {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+.highlight {
+  color: #ffeaa7;
+}
+
+/* 메인 콘텐츠 */
+.main {
+  padding: 32px 0 48px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 28px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.card__title {
+  font-size: 1.25rem;
+  margin-bottom: 16px;
+  color: #2d3436;
+  border-bottom: 2px solid #4a90d9;
+  padding-bottom: 8px;
+}
+
+.card__text {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* 취미 목록 */
+.hobby-list {
+  list-style: none;
+}
+
+.hobby-list__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 16px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.hobby-list__item:last-child {
+  border-bottom: none;
+}
+
+.hobby-list__icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.hobby-list__item h3 {
+  font-size: 1.1rem;
+  margin-bottom: 4px;
+  color: #2d3436;
+}
+
+.hobby-list__item p {
+  font-size: 0.95rem;
+  color: #666;
+}
+
+/* 학교 목록 */
+.school-list {
+  list-style: none;
+  margin-top: 16px;
+}
+
+.school-list__item {
+  background: #f0f4ff;
+  border-left: 4px solid #4a90d9;
+  padding: 14px 18px;
+  margin-bottom: 10px;
+  border-radius: 0 8px 8px 0;
+  font-weight: 600;
+  color: #2d3436;
+}
+
+/* 푸터 */
+.footer {
+  background: #2d3436;
+  color: #bbb;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 0.875rem;
+}
