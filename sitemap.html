@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>자기소개 페이지 사이트맵</title>
+<style>
+  :root {
+    --sm-bg: #ffffff;
+    --sm-bg-subtle: #f4f5f6;
+    --sm-surface: #ffffff;
+    --sm-border: #e2e5e8;
+    --sm-border-strong: #cdd1d5;
+    --sm-text: #1e2124;
+    --sm-text-secondary: #565f68;
+    --sm-line: #b7bec4;
+    --sm-accent: #205fd6;
+    --sm-accent-strong: #0b3f9e;
+    --sm-accent-soft: #eaf1fe;
+    --sm-accent-soft-border: #cddefb;
+    --sm-warn-bg: #fdf3e6;
+    --sm-warn-border: #f0d6a8;
+    --sm-warn-text: #7a4c07;
+
+    --font-sans: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
+      "Malgun Gothic", "Noto Sans KR", sans-serif;
+    --font-mono: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas,
+      monospace;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --sm-bg: #14171b;
+      --sm-bg-subtle: #1a1e23;
+      --sm-surface: #1c2126;
+      --sm-border: #2c333a;
+      --sm-border-strong: #3c454e;
+      --sm-text: #e8eaed;
+      --sm-text-secondary: #9aa4ad;
+      --sm-line: #4a545d;
+      --sm-accent: #6fa0ff;
+      --sm-accent-strong: #9cbeff;
+      --sm-accent-soft: #1b2740;
+      --sm-accent-soft-border: #2c3f66;
+      --sm-warn-bg: #2b2210;
+      --sm-warn-border: #5a4419;
+      --sm-warn-text: #e3b673;
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --sm-bg: #14171b;
+    --sm-bg-subtle: #1a1e23;
+    --sm-surface: #1c2126;
+    --sm-border: #2c333a;
+    --sm-border-strong: #3c454e;
+    --sm-text: #e8eaed;
+    --sm-text-secondary: #9aa4ad;
+    --sm-line: #4a545d;
+    --sm-accent: #6fa0ff;
+    --sm-accent-strong: #9cbeff;
+    --sm-accent-soft: #1b2740;
+    --sm-accent-soft-border: #2c3f66;
+    --sm-warn-bg: #2b2210;
+    --sm-warn-border: #5a4419;
+    --sm-warn-text: #e3b673;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    background: var(--sm-bg);
+    color: var(--sm-text);
+    font-family: var(--font-sans);
+    line-height: 1.6;
+  }
+
+  .page {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 56px 24px 80px;
+  }
+
+  .eyebrow {
+    font-family: var(--font-mono);
+    font-size: 12.5px;
+    letter-spacing: 0.06em;
+    color: var(--sm-accent);
+    text-transform: uppercase;
+    margin: 0 0 10px;
+  }
+
+  h1 {
+    font-size: 28px;
+    font-weight: 700;
+    margin: 0 0 12px;
+    text-wrap: balance;
+    letter-spacing: -0.01em;
+  }
+
+  .lede {
+    font-size: 15.5px;
+    color: var(--sm-text-secondary);
+    max-width: 62ch;
+    margin: 0 0 8px;
+  }
+
+  .lede + .lede {
+    margin-top: 6px;
+  }
+
+  .meta {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--sm-text-secondary);
+    margin-top: 18px;
+  }
+
+  figure {
+    margin: 40px 0 0;
+  }
+
+  .diagram-frame {
+    background: var(--sm-bg-subtle);
+    border: 1px solid var(--sm-border);
+    border-radius: 16px;
+    padding: 16px;
+    overflow-x: auto;
+  }
+
+  svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    min-width: 640px;
+  }
+
+  figcaption {
+    font-size: 13px;
+    color: var(--sm-text-secondary);
+    margin-top: 10px;
+    max-width: 65ch;
+  }
+
+  .callout {
+    display: flex;
+    gap: 12px;
+    margin-top: 28px;
+    padding: 16px 18px;
+    background: var(--sm-warn-bg);
+    border: 1px solid var(--sm-warn-border);
+    border-radius: 12px;
+  }
+
+  .callout__mark {
+    font-family: var(--font-mono);
+    font-weight: 700;
+    color: var(--sm-warn-text);
+    flex-shrink: 0;
+  }
+
+  .callout__body {
+    font-size: 14px;
+    color: var(--sm-warn-text);
+  }
+
+  .callout__body strong {
+    font-weight: 700;
+  }
+
+  h2 {
+    font-size: 17px;
+    font-weight: 700;
+    margin: 44px 0 4px;
+  }
+
+  .section-note {
+    font-size: 13.5px;
+    color: var(--sm-text-secondary);
+    margin: 0 0 16px;
+  }
+
+  .table-wrap {
+    overflow-x: auto;
+    border: 1px solid var(--sm-border);
+    border-radius: 12px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13.5px;
+    min-width: 620px;
+  }
+
+  thead th {
+    text-align: left;
+    font-family: var(--font-mono);
+    font-size: 11.5px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: var(--sm-text-secondary);
+    background: var(--sm-bg-subtle);
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--sm-border);
+  }
+
+  tbody td {
+    padding: 11px 14px;
+    border-bottom: 1px solid var(--sm-border);
+    vertical-align: top;
+    color: var(--sm-text);
+  }
+
+  tbody tr:last-child td {
+    border-bottom: none;
+  }
+
+  tbody tr.is-collision td:first-child,
+  tbody tr.is-collision td:nth-child(3) {
+    color: var(--sm-accent-strong);
+    font-weight: 600;
+  }
+
+  td.mono,
+  th.mono {
+    font-family: var(--font-mono);
+    font-size: 12.5px;
+    color: var(--sm-text-secondary);
+    white-space: nowrap;
+  }
+
+  .foot-note {
+    margin-top: 40px;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--sm-text-secondary);
+    border-top: 1px solid var(--sm-border);
+    padding-top: 16px;
+  }
+</style>
+</head>
+<body>
+<div class="page">
+  <p class="eyebrow">sitemap · index.html</p>
+  <h1>자기소개 페이지 사이트맵</h1>
+  <p class="lede">
+    이 프로젝트는 페이지가 하나뿐인 단일 페이지 사이트입니다. 그래서 여기서
+    말하는 "사이트맵"은 여러 페이지 간 이동이 아니라, 헤더에서 클릭했을 때
+    <strong>한 페이지 안에서 어느 순서·위치의 섹션으로 이동하는지</strong>를
+    보여주는 앵커(#) 내비게이션 지도입니다.
+  </p>
+  <p class="lede">
+    아래 그림은 헤더의 배치 순서(위)와 실제 문서에서 섹션이 쌓인 순서(아래)를
+    화살표로 연결해 보여줍니다.
+  </p>
+
+  <figure>
+    <div class="diagram-frame">
+      <svg viewBox="0 0 1000 940" role="img" aria-label="헤더의 로고와 5개 메뉴(소개, 자기소개, 관심사, 목표, 학습)가 각각 페이지의 히어로, 자기소개, 관심사, 목표, 학습 섹션으로 순서대로 연결되며, 로고와 두 번째 메뉴가 같은 '자기소개' 문구를 쓰면서도 서로 다른 섹션으로 연결되는 것을 보여주는 다이어그램. 푸터는 헤더 메뉴와 연결되어 있지 않다.">
+        <defs>
+          <marker id="arrow-n" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+            <path d="M0,0 L10,5 L0,10 z" fill="var(--sm-line)"></path>
+          </marker>
+          <marker id="arrow-a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+            <path d="M0,0 L10,5 L0,10 z" fill="var(--sm-accent)"></path>
+          </marker>
+        </defs>
+
+        <text x="20" y="12" font-family="var(--font-mono)" font-size="11" fill="var(--sm-text-secondary)" letter-spacing="0.04em">HEADER — 배치 순서 (왼쪽 → 오른쪽)</text>
+
+        <rect x="20" y="20" width="960" height="72" rx="14" fill="var(--sm-surface)" stroke="var(--sm-border-strong)"></rect>
+
+        <rect x="40" y="40" width="160" height="32" rx="16" fill="var(--sm-accent-soft)" stroke="var(--sm-accent-soft-border)"></rect>
+        <text x="120" y="61" text-anchor="middle" font-family="var(--font-sans)" font-size="13" font-weight="700" fill="var(--sm-accent-strong)">자기소개 · 로고</text>
+
+        <rect x="230" y="40" width="134" height="32" rx="16" fill="var(--sm-bg-subtle)" stroke="var(--sm-border)"></rect>
+        <text x="297" y="61" text-anchor="middle" font-family="var(--font-sans)" font-size="13" font-weight="600" fill="var(--sm-text)">① 소개</text>
+
+        <rect x="379" y="40" width="134" height="32" rx="16" fill="var(--sm-accent-soft)" stroke="var(--sm-accent-soft-border)"></rect>
+        <text x="446" y="61" text-anchor="middle" font-family="var(--font-sans)" font-size="13" font-weight="700" fill="var(--sm-accent-strong)">② 자기소개</text>
+
+        <rect x="528" y="40" width="134" height="32" rx="16" fill="var(--sm-bg-subtle)" stroke="var(--sm-border)"></rect>
+        <text x="595" y="61" text-anchor="middle" font-family="var(--font-sans)" font-size="13" font-weight="600" fill="var(--sm-text)">③ 관심사</text>
+
+        <rect x="677" y="40" width="134" height="32" rx="16" fill="var(--sm-bg-subtle)" stroke="var(--sm-border)"></rect>
+        <text x="744" y="61" text-anchor="middle" font-family="var(--font-sans)" font-size="13" font-weight="600" fill="var(--sm-text)">④ 목표</text>
+
+        <rect x="826" y="40" width="134" height="32" rx="16" fill="var(--sm-bg-subtle)" stroke="var(--sm-border)"></rect>
+        <text x="893" y="61" text-anchor="middle" font-family="var(--font-sans)" font-size="13" font-weight="600" fill="var(--sm-text)">⑤ 학습</text>
+
+        <line x1="120" y1="72" x2="120" y2="150" stroke="var(--sm-accent)" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#arrow-a)"></line>
+        <line x1="297" y1="72" x2="297" y2="150" stroke="var(--sm-line)" stroke-width="2" marker-end="url(#arrow-n)"></line>
+        <line x1="446" y1="72" x2="446" y2="244" stroke="var(--sm-accent)" stroke-width="2" marker-end="url(#arrow-a)"></line>
+        <line x1="595" y1="72" x2="595" y2="338" stroke="var(--sm-line)" stroke-width="2" marker-end="url(#arrow-n)"></line>
+        <line x1="744" y1="72" x2="744" y2="518" stroke="var(--sm-line)" stroke-width="2" marker-end="url(#arrow-n)"></line>
+        <line x1="893" y1="72" x2="893" y2="668" stroke="var(--sm-line)" stroke-width="2" marker-end="url(#arrow-n)"></line>
+
+        <text x="20" y="132" font-family="var(--font-mono)" font-size="11" fill="var(--sm-text-secondary)" letter-spacing="0.04em">PAGE — 문서 순서 (위 → 아래)</text>
+
+        <rect x="20" y="150" width="960" height="64" rx="12" fill="var(--sm-surface)" stroke="var(--sm-border)"></rect>
+        <text x="44" y="176" font-family="var(--font-sans)" font-size="15" font-weight="700" fill="var(--sm-text)">안녕하세요, 중학생입니다</text>
+        <text x="44" y="196" font-family="var(--font-mono)" font-size="11.5" fill="var(--sm-text-secondary)">① #intro · 히어로</text>
+
+        <rect x="20" y="244" width="960" height="64" rx="12" fill="var(--sm-surface)" stroke="var(--sm-accent-soft-border)" stroke-width="1.5"></rect>
+        <text x="44" y="270" font-family="var(--font-sans)" font-size="15" font-weight="700" fill="var(--sm-text)">자기소개</text>
+        <text x="44" y="290" font-family="var(--font-mono)" font-size="11.5" fill="var(--sm-accent-strong)">② #about · 카드 1개</text>
+
+        <rect x="20" y="338" width="960" height="150" rx="12" fill="var(--sm-surface)" stroke="var(--sm-border)"></rect>
+        <text x="44" y="364" font-family="var(--font-sans)" font-size="15" font-weight="700" fill="var(--sm-text)">관심사</text>
+        <text x="44" y="384" font-family="var(--font-mono)" font-size="11.5" fill="var(--sm-text-secondary)">③ #interests · 카드 1개, 목록 3개</text>
+        <rect x="44" y="400" width="290" height="66" rx="10" fill="var(--sm-bg-subtle)" stroke="var(--sm-border)"></rect>
+        <text x="60" y="426" font-family="var(--font-sans)" font-size="12.5" fill="var(--sm-text)">🎧 음악 감상</text>
+        <text x="60" y="448" font-family="var(--font-sans)" font-size="11" fill="var(--sm-text-secondary)">장르 무관, 기분 전환</text>
+        <rect x="349" y="400" width="290" height="66" rx="10" fill="var(--sm-bg-subtle)" stroke="var(--sm-border)"></rect>
+        <text x="365" y="426" font-family="var(--font-sans)" font-size="12.5" fill="var(--sm-text)">🎮 게임</text>
+        <text x="365" y="448" font-family="var(--font-sans)" font-size="11" fill="var(--sm-text-secondary)">친구와 함께, 전략 구상</text>
+        <rect x="654" y="400" width="306" height="66" rx="10" fill="var(--sm-bg-subtle)" stroke="var(--sm-border)"></rect>
+        <text x="670" y="426" font-family="var(--font-sans)" font-size="12.5" fill="var(--sm-text)">💻 코딩</text>
+        <text x="670" y="448" font-family="var(--font-sans)" font-size="11" fill="var(--sm-text-secondary)">웹 페이지 제작, 아이디어 구현</text>
+
+        <rect x="20" y="518" width="960" height="120" rx="12" fill="var(--sm-surface)" stroke="var(--sm-border)"></rect>
+        <text x="44" y="544" font-family="var(--font-sans)" font-size="15" font-weight="700" fill="var(--sm-text)">목표</text>
+        <text x="44" y="564" font-family="var(--font-mono)" font-size="11.5" fill="var(--sm-text-secondary)">④ #goals · 카드 1개, 태그 3개</text>
+        <rect x="44" y="580" width="150" height="28" rx="14" fill="var(--sm-accent-soft)" stroke="var(--sm-accent-soft-border)"></rect>
+        <text x="119" y="599" text-anchor="middle" font-family="var(--font-sans)" font-size="11.5" font-weight="600" fill="var(--sm-accent-strong)">소프트웨어 개발</text>
+        <rect x="204" y="580" width="120" height="28" rx="14" fill="var(--sm-accent-soft)" stroke="var(--sm-accent-soft-border)"></rect>
+        <text x="264" y="599" text-anchor="middle" font-family="var(--font-sans)" font-size="11.5" font-weight="600" fill="var(--sm-accent-strong)">로봇·공학</text>
+        <rect x="334" y="580" width="170" height="28" rx="14" fill="var(--sm-accent-soft)" stroke="var(--sm-accent-soft-border)"></rect>
+        <text x="419" y="599" text-anchor="middle" font-family="var(--font-sans)" font-size="11.5" font-weight="600" fill="var(--sm-accent-strong)">창의적 문제 해결</text>
+
+        <rect x="20" y="668" width="960" height="120" rx="12" fill="var(--sm-surface)" stroke="var(--sm-border)"></rect>
+        <text x="44" y="694" font-family="var(--font-sans)" font-size="15" font-weight="700" fill="var(--sm-text)">학습</text>
+        <text x="44" y="714" font-family="var(--font-mono)" font-size="11.5" fill="var(--sm-text-secondary)">⑤ #learning · 카드 1개, 태그 3개</text>
+        <rect x="44" y="730" width="90" height="28" rx="14" fill="var(--sm-accent-soft)" stroke="var(--sm-accent-soft-border)"></rect>
+        <text x="89" y="749" text-anchor="middle" font-family="var(--font-sans)" font-size="11.5" font-weight="600" fill="var(--sm-accent-strong)">HTML</text>
+        <rect x="144" y="730" width="90" height="28" rx="14" fill="var(--sm-accent-soft)" stroke="var(--sm-accent-soft-border)"></rect>
+        <text x="189" y="749" text-anchor="middle" font-family="var(--font-sans)" font-size="11.5" font-weight="600" fill="var(--sm-accent-strong)">CSS</text>
+        <rect x="244" y="730" width="160" height="28" rx="14" fill="var(--sm-accent-soft)" stroke="var(--sm-accent-soft-border)"></rect>
+        <text x="324" y="749" text-anchor="middle" font-family="var(--font-sans)" font-size="11.5" font-weight="600" fill="var(--sm-accent-strong)">프로그래밍 기초</text>
+
+        <rect x="20" y="828" width="960" height="56" rx="12" fill="var(--sm-bg-subtle)" stroke="var(--sm-border)" stroke-dasharray="4 4"></rect>
+        <text x="44" y="852" font-family="var(--font-sans)" font-size="13" font-weight="600" fill="var(--sm-text-secondary)">푸터 · © 2026 자기소개 페이지</text>
+        <text x="44" y="870" font-family="var(--font-mono)" font-size="11" fill="var(--sm-text-secondary)">헤더 메뉴에서 연결되지 않음 (id 없음)</text>
+      </svg>
+    </div>
+    <figcaption>
+      헤더의 로고와 메뉴 5개(위)가 순서대로 페이지 섹션(아래)에 연결된다. 실선
+      화살표는 일반 이동, 점선·강조색 화살표는 로고와 ② 메뉴가 서로 다른
+      곳으로 가면서도 같은 문구 "자기소개"를 쓰는 지점을 가리킨다. 푸터는
+      점선 테두리로, 헤더 메뉴와 연결되지 않았음을 표시했다.
+    </figcaption>
+  </figure>
+
+  <div class="callout">
+    <span class="callout__mark">!</span>
+    <p class="callout__body">
+      <strong>표기 중복:</strong> 헤더 왼쪽의 로고("자기소개", <code>#intro</code>로 이동)와
+      메뉴의 두 번째 항목("자기소개", <code>#about</code>로 이동)이 똑같은
+      문구를 쓰지만 서로 다른 섹션으로 이동합니다. 방문자가 로고를 "자기소개
+      섹션으로 가는 링크"로 오해할 수 있는 지점입니다.
+    </p>
+  </div>
+
+  <h2>메뉴 → 섹션 대응표</h2>
+  <p class="section-note">index.html에 실제로 적힌 순서·href 기준입니다.</p>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>순서</th>
+          <th>배치</th>
+          <th>메뉴 문구</th>
+          <th class="mono">href</th>
+          <th>이동 대상</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="mono">—</td>
+          <td>헤더 왼쪽 · 로고</td>
+          <td>자기소개</td>
+          <td class="mono">#intro</td>
+          <td>히어로 (h1)</td>
+        </tr>
+        <tr>
+          <td class="mono">①</td>
+          <td>헤더 오른쪽 nav 1번째</td>
+          <td>소개</td>
+          <td class="mono">#intro</td>
+          <td>히어로 (h1)</td>
+        </tr>
+        <tr class="is-collision">
+          <td class="mono">②</td>
+          <td>헤더 오른쪽 nav 2번째</td>
+          <td>자기소개</td>
+          <td class="mono">#about</td>
+          <td>자기소개 카드</td>
+        </tr>
+        <tr>
+          <td class="mono">③</td>
+          <td>헤더 오른쪽 nav 3번째</td>
+          <td>관심사</td>
+          <td class="mono">#interests</td>
+          <td>관심사 카드 (3항목)</td>
+        </tr>
+        <tr>
+          <td class="mono">④</td>
+          <td>헤더 오른쪽 nav 4번째</td>
+          <td>목표</td>
+          <td class="mono">#goals</td>
+          <td>목표 카드 (태그 3개)</td>
+        </tr>
+        <tr>
+          <td class="mono">⑤</td>
+          <td>헤더 오른쪽 nav 5번째</td>
+          <td>학습</td>
+          <td class="mono">#learning</td>
+          <td>학습 카드 (태그 3개)</td>
+        </tr>
+        <tr>
+          <td class="mono">—</td>
+          <td>본문 맨 아래</td>
+          <td>(메뉴 없음)</td>
+          <td class="mono">—</td>
+          <td>푸터 (저작권 문구)</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p class="foot-note">index.html · 커밋 07adb81 기준</p>
+</div>
+</body>
+</html>
