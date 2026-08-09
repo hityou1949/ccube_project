@@ -1,0 +1,107 @@
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+}
+
+/* Header + GNB */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--color-bg);
+  border-bottom: 0.1rem solid var(--color-border);
+  box-shadow: 0 0.1rem 0.4rem rgba(0, 0, 0, 0.06);
+}
+
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+  min-height: var(--header-height);
+}
+
+.site-identity {
+  flex-shrink: 0;
+  font-size: var(--font-size-heading-sm);
+  font-weight: 700;
+  color: var(--color-primary-60);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.site-identity:hover {
+  color: var(--color-primary-70);
+  text-decoration: none;
+}
+
+/* Main */
+.main {
+  padding: var(--space-xl) 0 var(--space-2xl);
+}
+
+.page-section {
+  scroll-margin-top: var(--header-height);
+  padding: var(--space-xl) 0;
+}
+
+.page-section:first-child {
+  padding-top: var(--space-lg);
+}
+
+.page-section:target .card {
+  border-left: 0.4rem solid var(--color-primary-50);
+  box-shadow: var(--shadow-card), 0 0 0 0.1rem var(--color-primary-10);
+}
+
+.page-section:target .intro-hero {
+  background: var(--color-primary-5);
+  border-radius: var(--radius);
+}
+
+/* Intro hero */
+.intro-hero {
+  text-align: center;
+  padding: var(--space-2xl) 0 var(--space-xl);
+}
+
+.intro-hero__title {
+  font-size: var(--font-size-heading-lg);
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: var(--space-sm);
+}
+
+.intro-hero__subtitle {
+  font-size: var(--font-size-body);
+  color: var(--color-text-secondary);
+}
+
+.intro-hero__highlight {
+  color: var(--color-primary-60);
+}
+
+/* Footer */
+.site-footer {
+  background: var(--color-gray-90);
+  color: var(--color-gray-20);
+  text-align: center;
+  padding: var(--space-lg) 0;
+  font-size: var(--font-size-detail);
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+  .site-header__inner {
+    flex-direction: column;
+    align-items: stretch;
+    padding: var(--space-sm) 0;
+    min-height: auto;
+  }
+
+  .site-identity {
+    text-align: center;
+    padding-bottom: var(--space-xs);
+  }
+}

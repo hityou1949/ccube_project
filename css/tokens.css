@@ -1,0 +1,53 @@
+:root {
+  /* KRDS Primary */
+  --color-primary-5: #ecf2fe;
+  --color-primary-10: #d8e5fd;
+  --color-primary-50: #256ef4;
+  --color-primary-60: #0b50d0;
+  --color-primary-70: #083891;
+
+  /* KRDS Grayscale */
+  --color-gray-0: #ffffff;
+  --color-gray-5: #f4f5f6;
+  --color-gray-10: #e6e8ea;
+  --color-gray-20: #cdd1d5;
+  --color-gray-60: #58616a;
+  --color-gray-70: #464c53;
+  --color-gray-90: #1e2124;
+
+  /* Semantic */
+  --color-bg: var(--color-gray-0);
+  --color-bg-subtle: var(--color-gray-5);
+  --color-text: var(--color-gray-90);
+  --color-text-secondary: var(--color-gray-70);
+  --color-border: var(--color-gray-10);
+  --color-border-strong: var(--color-gray-60);
+
+  /* Typography */
+  --font-family: "Pretendard GOV", "Pretendard GOV Variable", -apple-system,
+    BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic",
+    sans-serif;
+  --font-size-body: 1.6rem;
+  --font-size-heading-lg: 3.2rem;
+  --font-size-heading-md: 2.4rem;
+  --font-size-heading-sm: 2rem;
+  --font-size-detail: 1.4rem;
+  --line-height: 1.5;
+
+  /* Spacing */
+  --space-xs: 0.8rem;
+  --space-sm: 1.2rem;
+  --space-md: 1.6rem;
+  --space-lg: 2.4rem;
+  --space-xl: 3.2rem;
+  --space-2xl: 4.8rem;
+
+  /* Layout */
+  --container-max: 72rem;
+  --header-height: 5.6rem;
+  --radius: 0.6rem;
+  --shadow-card: 0 0.2rem 1.2rem rgba(0, 0, 0, 0.08);
+
+  /* Focus */
+  --focus-ring: 0 0 0 0.2rem var(--color-gray-0), 0 0 0 0.4rem var(--color-primary-50);
+}
